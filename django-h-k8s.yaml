@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-h-deployment
+  labels:
+    app: django-h-demo
+spec:
+  replicas: 1
+    selector:
+      matchLabels:
+        app: django-h-demo
+  template:
+    metadata:
+      labels:
+        app: django-h-demo
+    spec:
+      containers:
+        - name: django-h-demo-k8s
+          image: mohamedridh/django-h
+          ports:
+            - containerPort: 8080
