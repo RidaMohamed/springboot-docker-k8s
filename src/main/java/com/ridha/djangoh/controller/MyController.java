@@ -9,4 +9,9 @@ public class MyController {
     public String getData(){
         return "in django-h project";
     }
+
+    @GetMapping("/test-docker-2")
+    public String getDataTwo(){
+        return "in django-h  path 2";
+    }
 }
