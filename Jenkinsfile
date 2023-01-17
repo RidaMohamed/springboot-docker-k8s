@@ -2,7 +2,6 @@ pipeline {
     agent any
     tools{
         maven 'maven 3.8.5'
-        docker 'org.jenkinsci.plugins.docker.commons.tools.DockerTool'
     }
     stages{
         stage('Build Maven'){
