@@ -23,7 +23,7 @@ pipeline {
             script{
                 withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerHubpwd')]) {
                     sh 'docker login -u mohamedridh -p ${dockerHubpwd}'
-                    sh 'docker push mohamedridh/django-h .'
+                    sh 'docker push mohamedridh/django-h '
                 }
             }
         }
